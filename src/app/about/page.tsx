@@ -114,7 +114,7 @@ export default function AboutPage() {
             you see in the collection.
           </p>
           <div className="mt-8 flex justify-center">
-            <ButtonLink href="/custom-orders" variant="solid">
+            <ButtonLink href="/custom-orders" variant="solid" disabled>
               Start a Custom Order
             </ButtonLink>
           </div>

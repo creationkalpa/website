@@ -129,12 +129,23 @@ export default function CustomOrderForm({
       </p>
 
       <div className="flex flex-col gap-4 sm:flex-row">
-        <button
-          type="submit"
-          className="font-label inline-flex items-center justify-center gap-2 border border-charcoal bg-charcoal px-7 py-3.5 text-xs text-ivory transition-colors hover:border-gold hover:bg-gold"
-        >
-          Send via Email
-        </button>
+        {general ? (
+          <button
+            type="submit"
+            className="font-label inline-flex items-center justify-center gap-2 border border-charcoal bg-charcoal px-7 py-3.5 text-xs text-ivory transition-colors hover:border-gold hover:bg-gold"
+          >
+            Send via Email
+          </button>
+        ) : (
+          <button
+            type="button"
+            disabled
+            title="Coming Soon"
+            className="font-label inline-flex cursor-not-allowed items-center justify-center gap-2 border border-charcoal bg-charcoal px-7 py-3.5 text-xs text-ivory opacity-40"
+          >
+            Send via Email
+          </button>
+        )}
         <ButtonLink href={siteConfig.instagramUrl} variant="outline">
           Message @{siteConfig.instagramHandle}
         </ButtonLink>

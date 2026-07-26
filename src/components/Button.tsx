@@ -19,6 +19,8 @@ interface CommonProps {
   variant?: Variant;
   className?: string;
   children: React.ReactNode;
+  /** Renders an inert, faded button with a "Coming Soon" tooltip instead of a link. */
+  disabled?: boolean;
 }
 
 type ButtonAsLink = CommonProps &
@@ -29,9 +31,22 @@ export function ButtonLink({
   className = "",
   children,
   href,
+  disabled = false,
   ...props
 }: ButtonAsLink) {
   const isExternal = href.startsWith("http");
+
+  if (disabled) {
+    return (
+      <span
+        className={`${base} ${variants[variant]} ${className} cursor-not-allowed opacity-40`}
+        title="Coming Soon"
+      >
+        {children}
+      </span>
+    );
+  }
+
   return (
     <Link
       href={href}

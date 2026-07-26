@@ -61,6 +61,7 @@ export default function Home() {
               href="/custom-orders"
               variant="outline"
               className="border-ivory/70 text-ivory hover:bg-ivory hover:text-charcoal"
+              disabled
             >
               Start a Custom Order
             </ButtonLink>
@@ -198,6 +199,7 @@ export default function Home() {
               href="/custom-orders"
               variant="solid"
               className="border-gold bg-gold text-charcoal hover:border-ivory hover:bg-ivory"
+              disabled
             >
               Start a Custom Order
             </ButtonLink>

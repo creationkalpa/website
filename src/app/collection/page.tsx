@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
-import Link from "next/link";
 import Container from "@/components/Container";
 import Eyebrow from "@/components/Eyebrow";
 import CollectionGrid from "@/components/CollectionGrid";
@@ -23,9 +22,12 @@ export default function CollectionPage() {
           <p className="mt-5 text-sm leading-relaxed text-charcoal-soft sm:text-base">
             Every piece is made to order. Custom colours, sizes, and finishes
             are available on request —{" "}
-            <Link href="/custom-orders" className="text-gold-deep underline underline-offset-2">
+            <span
+              className="cursor-not-allowed text-gold-deep/50 underline underline-offset-2"
+              title="Coming Soon"
+            >
               start a custom order
-            </Link>
+            </span>
             .
           </p>
         </div>
