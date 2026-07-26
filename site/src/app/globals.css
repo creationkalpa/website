@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --color-ivory: #faf9f6;
+  --color-ivory-deep: #f3f0ea;
+  --color-charcoal: #3a3a3a;
+  --color-charcoal-soft: #6b6b66;
+  --color-gold: #b8924b;
+  --color-gold-deep: #9c7a3a;
+  --color-gold-pale: #e6d7b8;
+}
+
+@theme inline {
+  --color-ivory: var(--color-ivory);
+  --color-ivory-deep: var(--color-ivory-deep);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-soft: var(--color-charcoal-soft);
+  --color-gold: var(--color-gold);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-gold-pale: var(--color-gold-pale);
+
+  --font-serif: var(--font-serif);
+  --font-label: var(--font-label);
+  --font-body: var(--font-body);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-serif-display {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+}
+
+.font-label {
+  font-family: var(--font-label), ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.dot::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: var(--color-gold);
+  margin: 0 0.6em;
+  vertical-align: middle;
+}
+
+::selection {
+  background-color: var(--color-gold-pale);
+  color: var(--color-charcoal);
+}
