@@ -53,7 +53,7 @@ export const lamps: Lamp[] = [
     images: ["1.jpg"],
     tags: [...BASE_TAGS, "Table Lamp"],
     relatedSlugs: [],
-    featuredOnHome: true,
+    featuredOnHome: false,
     available: false,
     addedAt: "2026-07-01",
   },
@@ -179,7 +179,7 @@ export const lamps: Lamp[] = [
       "shell-green",
       "shell-white",
     ],
-    featuredOnHome: false,
+    featuredOnHome: true,
     available: true,
     addedAt: "2026-07-27",
   },
@@ -241,7 +241,7 @@ export const lamps: Lamp[] = [
       "nimbus-peach",
       "nimbus-white",
     ],
-    featuredOnHome: false,
+    featuredOnHome: true,
     available: true,
     addedAt: "2026-07-27",
   },
@@ -320,7 +320,7 @@ export const lamps: Lamp[] = [
     images: ["1.jpg", "2.jpg"],
     tags: [...BASE_TAGS, "Table Lamp"],
     relatedSlugs: ["flame-ivory", "flame-sage"],
-    featuredOnHome: true,
+    featuredOnHome: false,
     available: false,
     addedAt: "2026-07-01",
   },
@@ -482,7 +482,7 @@ export const lamps: Lamp[] = [
       "marea-green",
       "marea-orange",
     ],
-    featuredOnHome: false,
+    featuredOnHome: true,
     available: true,
     addedAt: "2026-07-27",
   },
@@ -564,7 +564,7 @@ export const lamps: Lamp[] = [
     images: ["1.png"],
     tags: [...BASE_TAGS, "Table Lamp"],
     relatedSlugs: ["willow-green", "willow-orange", "willow-white"],
-    featuredOnHome: false,
+    featuredOnHome: true,
     available: true,
     addedAt: "2026-07-27",
   },
@@ -627,7 +627,7 @@ export function getLampBySlug(slug: string): Lamp | undefined {
 }
 
 export function getFeaturedLamps(): Lamp[] {
-  return lamps.filter((l) => l.featuredOnHome);
+  return lamps.filter((l) => l.featuredOnHome && l.available);
 }
 
 export function getRelatedLamps(lamp: Lamp): Lamp[] {
